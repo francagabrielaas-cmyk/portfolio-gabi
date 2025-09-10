@@ -1,0 +1,116 @@
+/* Reset leve */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(180deg,#f2fbff 0%, #eaf7ff 60%);
+  color: #134a7a;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* WhatsApp flutuante */
+#whatsapp {
+  position: fixed;
+  left: 24px;
+  top: 24px;
+  background: #1f73a6;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 20px;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(31,115,166,0.12);
+}
+
+/* Layout principal */
+.container { max-width: 1100px; margin: 0 auto; padding: 36px; }
+
+/* HERO */
+.hero {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 36px;
+}
+.hero-text { flex: 1.1; text-align: left; padding-left: 12px; }
+.hero-text small { display:block; color:#2b6f9a; margin-bottom:12px; font-weight:600; }
+.hero-text h1 {
+  font-size: 84px;
+  line-height: 0.9;
+  color:#1f4f78;
+  letter-spacing: -2px;
+}
+.hero-text h1 span { display:block; font-weight:700; }
+.hero-text .sub { margin-top:12px; color:#3b6d8d; max-width:520px; }
+.cta {
+  margin-top:20px;
+  background:#1f73a6; color:#fff; border: none; padding:12px 20px; border-radius:22px;
+  cursor:pointer; font-weight:700; box-shadow: 0 8px 20px rgba(31,115,166,0.12);
+}
+.cta:hover { transform: translateY(-3px); transition: transform .18s ease; }
+
+/* foto hero */
+.hero-photo { width: 380px; text-align:right; }
+.hero-photo img { width: 100%; border-radius:14px; box-shadow: 0 16px 40px rgba(31,115,166,0.08); }
+
+/* Sobre */
+.sobre { margin-top:60px; padding: 36px 0; }
+.sobre h2 { color:#1f4f78; margin-bottom:18px; font-size:32px; }
+.sobre-grid { display:flex; gap:20px; align-items:center; }
+.card { background: rgba(255,255,255,0.7); padding:16px; border-radius:12px; width:320px; box-shadow: 0 8px 30px rgba(31,115,166,0.04);}
+.card-tilt img { width:100%; border-radius:8px; margin-bottom:8px; }
+
+/* blocos estilo figma */
+.blocos { display:flex; flex-direction:column; gap:12px; }
+.square {
+  background: rgba(255,255,255,0.6);
+  padding:14px; border-radius:10px; width: 240px;
+  border: 2px solid rgba(31,115,166,0.08); color:#0f4a6a;
+  transform: rotate(-6deg);
+  box-shadow: 0 8px 30px rgba(31,115,166,0.04);
+}
+
+/* Serviços */
+.servicos { margin-top:60px; padding-bottom:30px;}
+.servicos-grid { display:flex; gap:18px; justify-content:space-between; }
+.service { background: rgba(255,255,255,0.75); padding:20px; border-radius:12px; flex:1; box-shadow: 0 8px 30px rgba(31,115,166,0.03); margin: 6px; }
+
+/* Processos */
+.processos { margin-top:60px; padding: 30px 0; }
+.processos-grid { display:flex; gap:24px; align-items:center; }
+.left-photo img { width:360px; border-radius:12px; box-shadow: 0 16px 40px rgba(31,115,166,0.06); }
+.steps { flex:1; display:flex; flex-direction:column; gap:12px; }
+.step {
+  background: rgba(255,255,255,0.8);
+  padding:18px; border-radius:12px; border-left:4px solid rgba(31,115,166,0.06);
+  font-weight:700; color:#1f4f78;
+}
+.step.active { border-left-color:#1f73a6; }
+.step.final { border-left-color:#0f3a5a; }
+
+/* Contato */
+.contato { margin-top:60px; padding:30px 0; }
+.contato-sub { color:#3b6d8d; margin-bottom:18px; }
+.contato-grid { display:flex; gap:18px; align-items:flex-start; }
+.info-card { background: rgba(255,255,255,0.8); padding:18px; border-radius:12px; width:320px; box-shadow: 0 8px 30px rgba(31,115,166,0.04); }
+.form { flex:1; display:flex; flex-direction:column; gap:12px; }
+.form input, .form textarea {
+  padding:12px; border-radius:10px; border: 2px solid rgba(31,115,166,0.12);
+  font-size:16px;
+}
+.form .cta { width:220px; }
+
+/* Footer */
+.site-footer { margin-top:60px; background:#1f73a6; color:#fff; padding:28px; text-align:left; display:flex; justify-content:space-between; align-items:center; border-radius:8px; }
+.site-footer .brand { font-size:28px; font-weight:800; letter-spacing:1px; margin-left:16px; }
+.footer-nav a { color:#fff; margin-left:18px; text-decoration:none; }
+
+/* Responsividade simples */
+@media (max-width: 900px) {
+  .hero { flex-direction:column; text-align:center; }
+  .hero-text h1 { font-size:56px; }
+  .hero-photo { width:70%; margin:0 auto; }
+  .sobre-grid { flex-direction:column; align-items:center; }
+  .servicos-grid { flex-direction:column; }
+  .processos-grid { flex-direction:column; }
+  .contato-grid { flex-direction:column; }
+}
